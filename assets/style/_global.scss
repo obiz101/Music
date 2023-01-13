@@ -15,7 +15,6 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 15rem auto;
-  gap: 2rem;
   background: var(--white);
   font-size: 0.85rem;
   cursor: default;
@@ -63,13 +62,18 @@ input {
   display: flex;
   align-items: center;
   gap: 1rem;
+  background: var(--black);
+  padding: 0.25rem;
+  border-radius: .5rem;
   img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
     border-radius: 0.5rem;
   }
   p {
     font-size: 0.75rem;
+    margin-right: 0.5rem;
+    color: var(--white);
   }
 }
 

@@ -23,7 +23,6 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 15rem auto;
-  gap: 2rem;
   background: var(--white);
   font-size: 0.85rem;
   cursor: default;
@@ -81,14 +80,19 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 1rem;
+  background: var(--black);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
 }
 .profile img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 0.5rem;
 }
 .profile p {
   font-size: 0.75rem;
+  margin-right: 0.5rem;
+  color: var(--white);
 }
 
 .mute {
@@ -173,4 +177,15 @@ main header a.active {
 main header .user {
   display: flex;
   align-items: center;
+}
+main header .user span {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--grey);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
