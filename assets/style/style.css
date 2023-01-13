@@ -1,0 +1,176 @@
+:root {
+  --light: #e8ecef;
+  --white: #ffffff;
+  --black: #3e465a;
+  --grey: #a7b4cc;
+  --primary: cornflowerblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  color: var(--black);
+}
+
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15rem auto;
+  gap: 2rem;
+  background: var(--white);
+  font-size: 0.85rem;
+  cursor: default;
+}
+
+h2 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  background: none;
+  color: var(--black);
+}
+input::-moz-placeholder {
+  opacity: 1;
+  color: var(--grey);
+  font-size: 0.75rem;
+}
+input:-ms-input-placeholder {
+  opacity: 1;
+  color: var(--grey);
+  font-size: 0.75rem;
+}
+input::placeholder {
+  opacity: 1;
+  color: var(--grey);
+  font-size: 0.75rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 0.5rem;
+  background: var(--white);
+}
+.search i {
+  font-size: 1rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.profile p {
+  font-size: 0.75rem;
+}
+
+.mute {
+  color: var(--grey);
+}
+
+aside {
+  height: 100vh;
+  background: var(--light);
+}
+aside .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+aside .logo i {
+  font-size: 1.125rem;
+}
+aside nav {
+  margin-left: 2rem;
+}
+aside nav > div {
+  margin-bottom: 2rem;
+}
+aside nav > div > h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--grey);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+aside nav a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 1.5rem;
+  color: var(--black);
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+aside nav a.active {
+  color: var(--primary);
+}
+aside nav a.active::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  border-radius: 0.5rem;
+  background: var(--primary);
+}
+
+main header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 4rem;
+  width: 100%;
+}
+main header > div {
+  display: flex;
+  gap: 1rem;
+}
+main header a {
+  color: var(--grey);
+}
+main header a h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main header a.active {
+  color: var(--primary);
+}
+main header .user {
+  display: flex;
+  align-items: center;
+}
