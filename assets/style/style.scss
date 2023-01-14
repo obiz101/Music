@@ -1,9 +1,62 @@
-:root{
-  --dark: hsl(193, 23%, 6%) ;
+:root {
+  --dark: hsl(193, 25%, 6%);
   --black: hsl(193, 10%, 6%);
   --primary: hsl(193, 96%, 57%);
   --white: hsl(193, 0%, 100%);
-  --grey: hsl(193, 4%, 32%);
+  --grey: hsl(198, 5%, 58%);
 }
 
 @import 'global';
+
+aside {
+  background: var(--dark);
+  height: 100vh;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    color: var(--white);
+    i {
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+  }
+  nav {
+    margin: 1rem;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      height: 2.5rem;
+      margin-bottom: 0.625rem;
+      border-radius: 0.5rem;
+      text-transform: capitalize;
+      color: var(--grey);
+      &.active {
+        color: #fff;
+        background: var(--primary);
+      }
+      &:not(.active):hover {
+        background: hsl(193, 4%, 32%, 0.25);
+        color: #fff;
+      }
+      i {
+        font-size: 1rem;
+      }
+    }
+    .playlists {
+      margin-top: 2rem;
+      h4 {
+        margin-bottom: 1rem;
+      }
+      a {
+        i:last-child{
+          margin-left: auto;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

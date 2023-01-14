@@ -5,6 +5,7 @@
   border: 0;
   outline: 0;
   font-family: 'Poppins', sans-serif;
+  transition: all 500ms ease;
 }
 
 html{
@@ -15,7 +16,7 @@ body{
   background: var(--black);
   display: grid;
   grid-template-columns: 14rem auto;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 h1{
@@ -31,6 +32,13 @@ h3{
   font-size: 0.85rem;
   font-weight: 500;
   text-transform: capitalize;
+}
+
+h4{
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 a{
