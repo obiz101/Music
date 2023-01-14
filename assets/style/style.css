@@ -25,6 +25,7 @@ body {
   display: grid;
   grid-template-columns: 14rem auto;
   font-size: 0.75rem;
+  cursor: default;
 }
 
 h1 {
@@ -61,24 +62,57 @@ img {
   max-width: 100%;
 }
 
+input {
+  background: transparent;
+}
+input::-moz-placeholder {
+  color: var(--white);
+  font-size: 0.625rem;
+}
+input:-ms-input-placeholder {
+  color: var(--white);
+  font-size: 0.625rem;
+}
+input::placeholder {
+  color: var(--white);
+  font-size: 0.625rem;
+}
+
 .profile {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .profile img {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
 }
+.profile .handle {
+  line-height: 1.2;
+}
+.profile .handle h4 {
+  text-transform: capitalize;
+  letter-spacing: normal;
+}
 
 .search {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 2rem;
   border: 1px solid var(--grey);
+}
+.search input {
+  min-width: 22vw;
+}
+.search i {
+  font-size: 1.25rem;
+  color: var(--grey);
 }
 
 .mute {
@@ -88,14 +122,16 @@ img {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.5em 1rem;
-  border-radius: 1rem;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
   cursor: pointer;
   font-weight: 500;
-  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-size: 0.75rem;
 }
-.btn .primary {
+
+.primary {
   background: var(--primary);
   color: #fff;
 }
@@ -149,4 +185,22 @@ aside nav .playlists h4 {
 aside nav .playlists a i:last-child {
   margin-left: auto;
   font-size: 1.25rem;
+}
+
+main header {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+main .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .user span {
+  font-size: 1.125rem;
+  color: var(--grey);
 }
