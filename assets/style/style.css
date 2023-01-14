@@ -1,9 +1,9 @@
 :root {
-  --dark: hsl(193, 25%, 6%);
+  --dark: hsl(193, 30%, 6%);
   --black: hsl(193, 10%, 6%);
   --primary: hsl(193, 96%, 57%);
   --white: hsl(193, 0%, 100%);
-  --grey: hsl(198, 5%, 58%);
+  --grey: hsl(193, 5%, 58%);
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.625rem;
 }
 
 h2 {
@@ -45,8 +45,7 @@ h3 {
 
 h4 {
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  text-transform: capitalize;
   font-weight: 500;
 }
 
@@ -55,7 +54,7 @@ a {
 }
 
 small {
-  font-size: 0.725rem;
+  font-size: 0.625rem;
 }
 
 img {
@@ -139,6 +138,10 @@ input::placeholder {
 aside {
   background: var(--dark);
   height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 aside .logo {
   display: flex;
@@ -181,6 +184,8 @@ aside nav .playlists {
 }
 aside nav .playlists h4 {
   margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 aside nav .playlists a i:last-child {
   margin-left: auto;
@@ -194,6 +199,11 @@ main header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  background: var(--dark);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 main .user {
   display: flex;
@@ -203,4 +213,44 @@ main .user {
 main .user span {
   font-size: 1.125rem;
   color: var(--grey);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+.container .player {
+  width: 100%;
+  background: var(--dark);
+}
+.container h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.container .intro {
+  grid-column: 1/span 3;
+  padding: 2rem;
+}
+.container .intro p {
+  margin-bottom: 2rem;
+}
+.container section {
+  grid-column: 1/span 2;
+}
+.container .albums-container .albums {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.container .albums-container .albums .album .img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin-bottom: 0.5rem;
+}
+.container .albums-container .albums .album .info {
+  line-height: 1.2;
+  text-align: center;
 }
