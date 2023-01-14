@@ -5,3 +5,89 @@
   --white: hsl(193, 0%, 100%);
   --grey: hsl(193, 4%, 32%);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  color: var(--white);
+}
+
+body {
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 14rem auto;
+  font-size: 0.85rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+
+small {
+  font-size: 0.725rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--grey);
+}
+
+.mute {
+  color: var(--grey);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5em 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.btn .primary {
+  background: var(--primary);
+  color: #fff;
+}
