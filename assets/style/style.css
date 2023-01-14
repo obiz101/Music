@@ -232,7 +232,18 @@ main .user span {
 }
 .container .intro {
   grid-column: 1/span 3;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  background: url(../img/albums/sos.jpg) center no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  min-height: 10rem;
+}
+.container .intro h1 {
+  color: hsl(193deg, 10%, 6%);
+}
+.container .intro button {
+  background: #fff;
+  color: var(--primary);
 }
 .container .intro p {
   margin-bottom: 2rem;
@@ -249,6 +260,9 @@ main .user span {
   -o-object-fit: fill;
      object-fit: fill;
   margin-bottom: 0.5rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 .container .albums-container .albums .album .info {
   line-height: 1.2;

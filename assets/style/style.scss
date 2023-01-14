@@ -106,7 +106,18 @@ main {
   }
   .intro{
     grid-column: 1 / span 3;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    background: url(../img/albums/sos.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    min-height: 10rem;
+    h1{
+      color: hsl(193, 10%, 6%);
+    }
+    button{
+      background: #fff;
+      color: var(--primary);
+    }
     p{
       margin-bottom: 2rem;
     }
@@ -123,6 +134,9 @@ main {
         .img {
           object-fit: fill;
           margin-bottom: 0.5rem;
+          aspect-ratio: 1/1;
+          overflow: hidden;
+          border-radius: 0.5rem;
         }
         .info{
           line-height: 1.2;
