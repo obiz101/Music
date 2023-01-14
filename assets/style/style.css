@@ -22,7 +22,7 @@ html {
 body {
   width: 100%;
   display: grid;
-  grid-template-columns: 15rem auto;
+  grid-template-columns: 13rem auto;
   background: var(--white);
   font-size: 0.85rem;
   cursor: default;
@@ -36,7 +36,7 @@ h2 {
 h3 {
   font-size: 0.85rem;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 a {
@@ -80,8 +80,8 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: var(--black);
-  padding: 0.25rem;
+  border: 1px solid var(--grey);
+  padding: 0.125rem;
   border-radius: 0.5rem;
 }
 .profile img {
@@ -92,7 +92,7 @@ input::placeholder {
 .profile p {
   font-size: 0.75rem;
   margin-right: 0.5rem;
-  color: var(--white);
+  font-weight: 500;
 }
 
 .mute {
