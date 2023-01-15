@@ -13,7 +13,7 @@
   border: 0;
   outline: 0;
   font-family: "Poppins", sans-serif;
-  transition: all 500ms ease;
+  transition: all 400ms ease;
 }
 
 html {
@@ -191,6 +191,11 @@ aside nav .playlists a i:last-child {
   margin-left: auto;
   font-size: 1.25rem;
 }
+aside nav .playlists label {
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
 
 main header {
   width: 100%;
@@ -317,12 +322,15 @@ main .user span {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  position: relative;
+  top: 2rem;
 }
 .container .player .song {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .container .player .song .img {
   -o-object-fit: fill;
@@ -330,7 +338,7 @@ main .user span {
   margin-bottom: 0.5rem;
   aspect-ratio: 1/1;
   overflow: hidden;
-  width: 37.5%;
+  width: 45%;
   border-radius: 0.5rem;
 }
 .container .player .song .info {
@@ -340,8 +348,66 @@ main .user span {
 .container .player .lyrics {
   width: 100%;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .container .player .lyrics .active {
   color: var(--white);
+}
+.container .player .controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container .player .controls .range {
+  width: 90%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container .player .controls .range::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+  width: 25%;
+  height: 100%;
+  background: var(--primary);
+}
+.container .player .controls .range span {
+  width: 0.75rem;
+  height: 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--primary);
+  display: block;
+  position: absolute;
+  left: 25%;
+}
+.container .player .controls .play {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .player .controls .play span {
+  font-size: 1.3rem;
+  color: var(--primary);
+  cursor: pointer;
+  height: 1.75rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.container .player .controls .play span.play-icon {
+  background: var(--white);
+}
+.container .player .controls .play span:not(.play-icon):hover {
+  background: hsla(193deg, 4%, 32%, 0.25);
 }
