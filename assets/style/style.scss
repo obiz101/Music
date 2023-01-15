@@ -95,30 +95,26 @@ main {
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem 1.5rem;
   gap: 1rem;
-  .player {
-    width: 100%;
-    background: var(--dark);
-  }
   h2 {
     font-size: 1.125rem;
     font-weight: 500;
     margin-bottom: 2rem;
   }
-  .intro{
+  .intro {
     grid-column: 1 / span 3;
     padding: 3rem 2rem;
     background: url(../img/albums/sos.jpg) center no-repeat;
     background-size: cover;
     border-radius: 1rem;
     min-height: 10rem;
-    h1{
+    h1 {
       color: hsl(193, 10%, 6%);
     }
-    button{
+    button {
       background: #fff;
       color: var(--primary);
     }
-    p{
+    p {
       margin-bottom: 2rem;
     }
   }
@@ -126,6 +122,7 @@ main {
     grid-column: 1 / span 2;
   }
   .albums-container {
+    margin-bottom: 1rem;
     .albums {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -138,11 +135,55 @@ main {
           overflow: hidden;
           border-radius: 0.5rem;
         }
-        .info{
+        .info {
           line-height: 1.2;
           text-align: center;
         }
       }
     }
+  }
+  .playlist {
+    background: var(--dark);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
+    table {
+      text-align: left;
+      border-spacing: 0.75rem;
+      width: 100%;
+      th {
+        font-weight: 400;
+        color: var(--grey);
+      }
+      tr {
+        position: relative;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          background: var(--grey);
+          left: 0;
+          bottom: -0.5rem;
+        }
+        &.active {
+          color: var(--primary);
+        }
+      }
+      td {
+        padding-right: 1rem;
+        padding: 0.5rem 0;
+        img {
+          width: 2.5rem;
+        }
+      }
+    }
+  }
+  .player {
+    width: 100%;
+    background: var(--dark);
+    border-radius: 1rem;
   }
 }
