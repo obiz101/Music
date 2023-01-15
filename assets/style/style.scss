@@ -185,5 +185,36 @@ main {
     width: 100%;
     background: var(--dark);
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: max-content;
+    .song {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      .img {
+        object-fit: fill;
+        margin-bottom: 0.5rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        width: 37.5%;
+        border-radius: 0.5rem;
+      }
+      .info {
+        line-height: 1.2;
+        text-align: center;
+      }
+    }
+    .lyrics {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+      .active {
+        color: var(--white);
+      }
+    }
   }
 }

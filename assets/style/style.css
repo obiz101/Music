@@ -310,4 +310,38 @@ main .user span {
   width: 100%;
   background: var(--dark);
   border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.container .player .song {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.container .player .song .img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin-bottom: 0.5rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  width: 37.5%;
+  border-radius: 0.5rem;
+}
+.container .player .song .info {
+  line-height: 1.2;
+  text-align: center;
+}
+.container .player .lyrics {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .player .lyrics .active {
+  color: var(--white);
 }
